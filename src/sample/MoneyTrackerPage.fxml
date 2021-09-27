@@ -37,22 +37,22 @@
       </MenuBar>
       <ImageView fx:id="bill_icon" fitHeight="64.0" fitWidth="48.0" layoutX="825.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@bill.png" />
+            <Image url="@icons/bill.png" />
          </image>
       </ImageView>
       <ImageView fx:id="grocery_icon" fitHeight="73.0" fitWidth="64.0" layoutX="926.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@grocery.png" />
+            <Image url="@icons/grocery.png" />
          </image>
       </ImageView>
       <ImageView fx:id="restaurant_icon" fitHeight="64.0" fitWidth="81.0" layoutX="1029.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@res.png" />
+            <Image url="@icons/res.png" />
          </image>
       </ImageView>
       <ImageView fx:id="transport_icon" fitHeight="64.0" fitWidth="64.0" layoutX="817.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@transportation.png" />
+            <Image url="@icons/transportation.png" />
          </image>
       </ImageView>
       <Label layoutX="88.0" layoutY="74.0" prefHeight="45.0" prefWidth="296.0" text="Hello, User121">
@@ -90,12 +90,12 @@
       <Separator layoutX="79.0" layoutY="565.0" prefHeight="17.0" prefWidth="305.0" />
       <ImageView fx:id="bill_icon1" fitHeight="64.0" fitWidth="64.0" layoutX="1036.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@loan.png" />
+            <Image url="@icons/loan.png" />
          </image>
       </ImageView>
       <ImageView fx:id="bill_icon11" fitHeight="71.0" fitWidth="76.0" layoutX="922.0" layoutY="612.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@shopping.png" />
+            <Image url="@icons/shopping.png" />
          </image>
       </ImageView>
       <Label layoutX="814.0" layoutY="580.0" prefHeight="32.0" prefWidth="71.0" text="Transport">
