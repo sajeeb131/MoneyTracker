@@ -38,10 +38,10 @@ public class logInPage_Controller {
             System.out.println(successful);
 
             if(successful.equals("True")){
-                Parent root = FXMLLoader.load(getClass().getResource("MoneyTrackerPage.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("FXML/MoneyTrackerPage.fxml"));
                 Scene scene=new Scene(root);
                 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-                window.setTitle("Create a new Account");
+                window.setTitle("Money Tracker");
                 window.setScene(scene);
                 window.show();
             }
@@ -58,7 +58,7 @@ public class logInPage_Controller {
     @FXML
     void buttonCreateAccount(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("signUpPage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/signUpPage.fxml"));
             Scene scene=new Scene(root);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setTitle("Create a new Account");

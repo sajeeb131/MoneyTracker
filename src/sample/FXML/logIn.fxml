@@ -17,12 +17,12 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane prefHeight="400.0" prefWidth="340.0">
+      <Pane prefHeight="400.0" prefWidth="340.0" style="-fx-background-color: #5CDB95;">
          <children>
-            <Button layoutX="146.0" layoutY="215.0" mnemonicParsing="false" onAction="#button_LogIn" text="Log In" />
-            <TextField fx:id="password" layoutX="97.0" layoutY="158.0" promptText="Enter Password" />
-            <TextField fx:id="username" layoutX="97.0" layoutY="112.0" promptText="Enter Username Here" />
-            <Button layoutX="110.0" layoutY="253.0" mnemonicParsing="false" onAction="#buttonCreateAccount" text="Create a new account" />
+            <Button layoutX="142.0" layoutY="228.0" mnemonicParsing="false" onAction="#button_LogIn" text="Login" />
+            <TextField fx:id="password" blendMode="MULTIPLY" layoutX="88.0" layoutY="158.0" prefHeight="26.0" prefWidth="161.0" promptText="Enter Password" />
+            <TextField fx:id="username" blendMode="MULTIPLY" layoutX="88.0" layoutY="112.0" prefHeight="26.0" prefWidth="161.0" promptText="Enter Username Here" />
+            <Button layoutX="101.0" layoutY="268.0" mnemonicParsing="false" onAction="#buttonCreateAccount" text="Create a new account" />
             <Label fx:id="warning" layoutX="72.0" layoutY="47.0" text="Invalid username or password" textFill="RED" visible="false">
                <font>
                   <Font size="15.0" />

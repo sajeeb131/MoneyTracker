@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.ProgressBar?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1193.0" style="-fx-background-color: #58c458d4;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1193.0" style="-fx-background-color: #5CDB95;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
    <children>
       <MenuBar layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="708.0">
         <menus>
@@ -37,27 +36,32 @@
       </MenuBar>
       <ImageView fx:id="bill_icon" fitHeight="64.0" fitWidth="48.0" layoutX="825.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@icons/bill.png" />
+            <Image url="@../icons/bill.png" />
          </image>
       </ImageView>
       <ImageView fx:id="grocery_icon" fitHeight="73.0" fitWidth="64.0" layoutX="926.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@icons/grocery.png" />
+            <Image url="@../icons/grocery.png" />
          </image>
       </ImageView>
       <ImageView fx:id="restaurant_icon" fitHeight="64.0" fitWidth="81.0" layoutX="1029.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@icons/res.png" />
+            <Image url="@../icons/res.png" />
          </image>
       </ImageView>
       <ImageView fx:id="transport_icon" fitHeight="64.0" fitWidth="64.0" layoutX="817.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@icons/transportation.png" />
+            <Image url="@../icons/transportation.png" />
          </image>
       </ImageView>
-      <Label layoutX="88.0" layoutY="74.0" prefHeight="45.0" prefWidth="296.0" text="Hello, User121">
+      <ImageView fx:id="bill_icon1" fitHeight="64.0" fitWidth="64.0" layoutX="1036.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/loan.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="139.0" layoutY="75.0" prefHeight="45.0" prefWidth="115.0" text="User121">
          <font>
-            <Font name="Rockwell" size="29.0" />
+            <Font size="29.0" />
          </font>
       </Label>
       <Label layoutX="926.0" layoutY="419.0" prefHeight="31.0" prefWidth="64.0" text="Grocery">
@@ -75,27 +79,24 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Separator layoutX="769.0" layoutY="402.0" prefHeight="17.0" prefWidth="364.0">
+      <Separator layoutX="769.0" layoutY="385.0" prefHeight="17.0" prefWidth="348.0">
          <effect>
             <ColorAdjust brightness="0.12" contrast="-0.57" hue="0.09" saturation="0.54" />
-         </effect></Separator>
+         </effect>
+      </Separator>
       <Separator layoutX="738.0" layoutY="34.0" orientation="VERTICAL" prefHeight="752.0" prefWidth="14.0">
          <effect>
             <ColorAdjust brightness="-0.09" contrast="-0.6" hue="-0.07" saturation="0.26" />
-         </effect></Separator>
+         </effect>
+      </Separator>
       <Separator layoutX="79.0" layoutY="730.0" prefHeight="17.0" prefWidth="305.0" />
       <Separator layoutX="79.0" layoutY="689.0" prefHeight="17.0" prefWidth="305.0" />
       <Separator layoutX="79.0" layoutY="643.0" prefHeight="17.0" prefWidth="305.0" />
       <Separator layoutX="79.0" layoutY="604.0" prefHeight="17.0" prefWidth="305.0" />
       <Separator layoutX="79.0" layoutY="565.0" prefHeight="17.0" prefWidth="305.0" />
-      <ImageView fx:id="bill_icon1" fitHeight="64.0" fitWidth="64.0" layoutX="1036.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@icons/loan.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="bill_icon11" fitHeight="71.0" fitWidth="76.0" layoutX="922.0" layoutY="612.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@icons/shopping.png" />
+            <Image url="@../icons/shopping.png" />
          </image>
       </ImageView>
       <Label layoutX="814.0" layoutY="580.0" prefHeight="32.0" prefWidth="71.0" text="Transport">
@@ -113,38 +114,36 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button layoutX="903.0" layoutY="736.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" text="Save" />
-      <Label layoutX="818.0" layoutY="522.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label layoutX="827.0" layoutY="520.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="930.0" layoutY="522.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label layoutX="939.0" layoutY="520.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="1036.0" layoutY="522.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label layoutX="1045.0" layoutY="520.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="1053.0" layoutY="682.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label layoutX="1062.0" layoutY="682.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="931.0" layoutY="682.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label layoutX="940.0" layoutY="682.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="818.0" layoutY="682.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label layoutX="827.0" layoutY="682.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <ProgressBar layoutX="795.0" layoutY="51.0" prefHeight="45.0" prefWidth="272.0" progress="0.3" style="-fx-background-color: white;" />
       <Separator layoutX="761.0" layoutY="130.0" prefHeight="17.0" prefWidth="412.0" />
       <Label layoutX="769.0" layoutY="147.0" prefHeight="31.0" prefWidth="71.0" text="Accounts">
          <font>
@@ -171,16 +170,16 @@
             <Font name="Segoe UI Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="785.0" layoutY="357.0" prefHeight="31.0" prefWidth="81.0" text="Investments">
+      <Label layoutX="784.0" layoutY="354.0" prefHeight="31.0" prefWidth="81.0" text="Investments">
          <font>
             <Font name="Segoe UI Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Separator layoutX="784.0" layoutY="340.0" prefHeight="17.0" prefWidth="348.0" />
-      <Separator layoutX="789.0" layoutY="298.0" prefHeight="17.0" prefWidth="348.0" />
-      <Separator layoutX="784.0" layoutY="255.0" prefHeight="17.0" prefWidth="348.0" />
-      <Separator layoutX="785.0" layoutY="201.0" prefHeight="17.0" prefWidth="348.0" />
-      <Label layoutX="1029.0" layoutY="357.0" prefHeight="31.0" prefWidth="103.0" text="\$$">
+      <Separator layoutX="769.0" layoutY="337.0" prefHeight="17.0" prefWidth="348.0" />
+      <Separator layoutX="769.0" layoutY="298.0" prefHeight="17.0" prefWidth="348.0" />
+      <Separator layoutX="769.0" layoutY="255.0" prefHeight="17.0" prefWidth="348.0" />
+      <Separator layoutX="769.0" layoutY="214.0" prefHeight="17.0" prefWidth="348.0" />
+      <Label layoutX="1028.0" layoutY="354.0" prefHeight="31.0" prefWidth="103.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
@@ -205,6 +204,12 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextArea layoutX="88.0" layoutY="138.0" opacity="0.5" prefHeight="330.0" prefWidth="494.0" />
+      <TextArea fx:id="area" blendMode="SOFT_LIGHT" editable="false" layoutX="50.0" layoutY="137.0" opacity="0.5" prefHeight="330.0" prefWidth="494.0" />
+      <Button layoutX="922.0" layoutY="731.0" mnemonicParsing="false" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" text="ADD" />
+      <Label layoutX="65.0" layoutY="75.0" text="Hello,">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
