@@ -30,8 +30,8 @@ public class signUpPage_Controller implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         currency_choiceBox.getItems().addAll(currency);
     }
-    BufferedWriter bw;
-    BufferedReader br;
+    BufferedWriter writer;
+    BufferedReader reader;
     @FXML
     void button_SignUp(ActionEvent event) throws IOException {
         if(username.getText().length()==0||fullName.getLength()==0||password.getLength()==0||totalBalance.getLength()==0||currency_choiceBox.getValue().length()==0){
@@ -40,17 +40,17 @@ public class signUpPage_Controller implements Initializable{
         }
         Socket sc=new Socket("localhost",2021);
         InputStreamReader i=new InputStreamReader(sc.getInputStream());
-        br=new BufferedReader(i);
+        reader=new BufferedReader(i);
         OutputStreamWriter o=new OutputStreamWriter(sc.getOutputStream());
-        bw=new BufferedWriter(o);
+        writer=new BufferedWriter(o);
 
-        bw.write("new"+"\n");
-        bw.write(username.getText()+"\n");
-        bw.write(password.getText()+"\n");
-        bw.write(fullName.getText()+"\n");
-        bw.write(totalBalance.getText()+"\n");
-        bw.write(currency_choiceBox.getValue()+"\n");
-        bw.flush();
+        writer.write("new"+"\n");
+        writer.write(username.getText()+"\n");
+        writer.write(password.getText()+"\n");
+        writer.write(fullName.getText()+"\n");
+        writer.write(totalBalance.getText()+"\n");
+        writer.write(currency_choiceBox.getValue()+"\n");
+        writer.flush();
 
         try{
             Parent root = FXMLLoader.load(getClass().getResource("FXML/MoneyTrackerPage.fxml"));

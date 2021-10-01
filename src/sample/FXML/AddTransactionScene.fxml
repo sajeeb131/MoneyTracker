@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #5CDB95;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #5CDB95;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddTransaction">
   <tabs>
     <Tab text="Expense">
       <content>
@@ -22,7 +22,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <ChoiceBox layoutX="152.0" layoutY="31.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="categoryAdd" layoutX="152.0" layoutY="31.0" prefWidth="150.0" />
                   <Label layoutX="59.0" layoutY="31.0" text="Category">
                      <font>
                         <Font name="System Bold" size="14.0" />
@@ -33,15 +33,15 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="153.0" layoutY="163.0" prefHeight="25.0" prefWidth="150.0" />
-                  <TextArea layoutX="152.0" layoutY="232.0" prefHeight="96.0" prefWidth="200.0" promptText="Write Here..." style="-fx-background-color: light blue;" />
+                  <DatePicker fx:id="dateEX" layoutX="153.0" layoutY="163.0" onAction="#getDate" prefHeight="25.0" prefWidth="150.0" promptText="Enter a date" />
+                  <TextArea fx:id="descriptionAdd" layoutX="152.0" layoutY="232.0" prefHeight="96.0" prefWidth="200.0" promptText="Write Here..." style="-fx-background-color: light blue;" />
                   <Label layoutX="58.0" layoutY="229.0" text="Description">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Button layoutX="160.0" layoutY="369.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" text="Button" />
-                  <TextField blendMode="MULTIPLY" layoutX="153.0" layoutY="98.0" promptText="Enter Amount Here" />
+                  <Button layoutX="160.0" layoutY="369.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="29.0" prefWidth="81.0" text="Save" />
+                  <TextField fx:id="amountTF" blendMode="MULTIPLY" layoutX="153.0" layoutY="98.0" promptText="Enter Amount Here" />
                </children></AnchorPane>
       </content>
     </Tab>

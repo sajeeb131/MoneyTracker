@@ -15,12 +15,13 @@ import java.io.*;
 import java.net.Socket;
 
 public class logInPage_Controller {
+
     @FXML
     Label warning;
     @FXML
     TextField username,password;
-    BufferedWriter writer;
-    BufferedReader reader;
+    static BufferedWriter writer;
+    static BufferedReader reader;
     @FXML
     void button_LogIn(ActionEvent event){
         try{
@@ -54,6 +55,13 @@ public class logInPage_Controller {
             e.printStackTrace();
         }
 
+    }
+
+    public static BufferedWriter getWriter(){
+        return writer;
+    }
+    public static BufferedReader getReader(){
+        return reader;
     }
     @FXML
     void buttonCreateAccount(ActionEvent event){
