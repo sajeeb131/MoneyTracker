@@ -19,9 +19,9 @@ import java.util.ResourceBundle;
 
 public class signUpPage_Controller implements Initializable{
     @FXML
-    TextField username,fullName,password,totalBalance;
+    TextField username,firstname,lastname,password,totalBalance;
     @FXML
-    Label warning;
+    Label warning,currencyT;
     @FXML
     private ChoiceBox<String> currency_choiceBox;
     private String[] currency={"Taka","US Dollar","Euro"};
@@ -29,12 +29,16 @@ public class signUpPage_Controller implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         currency_choiceBox.getItems().addAll(currency);
+        currency_choiceBox.setOnAction(this::setCurrency_choiceBox);
+    }
+    private void setCurrency_choiceBox(ActionEvent event){
+        currencyT.setVisible(false);
     }
     BufferedWriter writer;
     BufferedReader reader;
     @FXML
     void button_SignUp(ActionEvent event) throws IOException {
-        if(username.getText().length()==0||fullName.getLength()==0||password.getLength()==0||totalBalance.getLength()==0||currency_choiceBox.getValue().length()==0){
+        if(username.getText().length()==0||lastname.getLength()==0||firstname.getLength()==0||password.getLength()==0||totalBalance.getLength()==0||currency_choiceBox.getValue().length()==0){
             warning.setVisible(true);
             return;
         }
@@ -47,7 +51,7 @@ public class signUpPage_Controller implements Initializable{
         writer.write("new"+"\n");
         writer.write(username.getText()+"\n");
         writer.write(password.getText()+"\n");
-        writer.write(fullName.getText()+"\n");
+        writer.write(firstname.getText()+" "+lastname.getText()+"\n");
         writer.write(totalBalance.getText()+"\n");
         writer.write(currency_choiceBox.getValue()+"\n");
         writer.flush();

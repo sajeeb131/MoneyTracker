@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import javafx.event.ActionEvent;
@@ -69,8 +70,10 @@ public class logInPage_Controller {
             Parent root = FXMLLoader.load(getClass().getResource("FXML/signUpPage.fxml"));
             Scene scene=new Scene(root);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setTitle("Create a new Account");
+            window.setTitle("Sign Up");
             window.setScene(scene);
+            Image icon=new Image("sample/icons/singUpIcon.png");
+            window.getIcons().add(icon);
             window.show();
         }
         catch (IOException e){

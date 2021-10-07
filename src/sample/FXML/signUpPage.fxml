@@ -8,22 +8,36 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.signUpPage_Controller">
+<AnchorPane prefHeight="400.0" prefWidth="340.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.signUpPage_Controller">
    <children>
-      <TextField fx:id="username" layoutX="141.0" layoutY="26.0" />
-      <TextField fx:id="fullName" layoutX="141.0" layoutY="81.0" />
-      <TextField fx:id="password" layoutX="141.0" layoutY="141.0" />
-      <TextField fx:id="totalBalance" layoutX="141.0" layoutY="199.0" />
-      <Text layoutX="56.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username: " />
-      <Text layoutX="57.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name:" />
-      <Text layoutX="60.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-      <Text layoutX="50.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Balance" />
-      <ChoiceBox fx:id="currency_choiceBox" layoutX="141.0" layoutY="254.0" prefWidth="150.0" />
-      <Button layoutX="141.0" layoutY="349.0" mnemonicParsing="false" onAction="#button_SignUp" text="Sign Up" />
-      <Text layoutX="62.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currency" />
-      <Label fx:id="warning" layoutX="102.0" layoutY="301.0" text="Please fill all room" textFill="#ff3434" visible="false">
+      <Text layoutX="35.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
          <font>
-            <Font size="19.0" />
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="firstname" layoutX="32.0" layoutY="100.0" prefHeight="26.0" prefWidth="121.0" promptText="First Name" />
+      <TextField fx:id="lastname" layoutX="170.0" layoutY="100.0" prefHeight="26.0" prefWidth="121.0" promptText="Last Name" />
+      <TextField fx:id="username" layoutX="32.0" layoutY="151.0" prefHeight="26.0" prefWidth="261.0" promptText="Username" />
+      <TextField fx:id="password" layoutX="32.0" layoutY="200.0" prefHeight="26.0" prefWidth="261.0" promptText="Password" />
+      <TextField fx:id="totalBalance" layoutX="32.0" layoutY="250.0" prefHeight="26.0" prefWidth="261.0" promptText="Total Balance" />
+      <ChoiceBox fx:id="currency_choiceBox" blendMode="DARKEN" layoutX="33.0" layoutY="305.0" opacity="0.67" prefHeight="28.0" prefWidth="167.0" />
+      <Button layoutX="222.0" layoutY="305.0" mnemonicParsing="false" onAction="#button_SignUp" prefHeight="28.0" prefWidth="72.0" style="-fx-background-color: #33C0FF;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Text layoutX="38.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please fill in this form">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="warning" layoutX="33.0" layoutY="355.0" text="Please fill in all the boxes correctly" textFill="#ff0707" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="currencyT" layoutX="50.0" layoutY="310.0" text="Choose your currency" textFill="#8d8d8d">
+         <font>
+            <Font size="13.0" />
          </font>
       </Label>
    </children>
