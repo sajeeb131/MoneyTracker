@@ -57,7 +57,7 @@ public class signUpPage_Controller implements Initializable{
         writer.flush();
 
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("FXML/MoneyTrackerPage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/logIn.fxml"));
             Scene scene=new Scene(root);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setTitle("Create a new Account");
@@ -65,7 +65,7 @@ public class signUpPage_Controller implements Initializable{
             window.show();
         }
         catch (IOException e){
-            System.out.println("sign Up Page not found!");
+            e.printStackTrace();
         }
 
 
