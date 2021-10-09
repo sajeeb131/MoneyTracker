@@ -16,7 +16,6 @@ import java.io.*;
 import java.net.Socket;
 
 public class logInPage_Controller {
-
     @FXML
     Label warning;
     @FXML

@@ -4,14 +4,11 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -94,7 +91,6 @@ public class MoneyTracker_Controller{
                     catch (ClassCastException e){
                         e.printStackTrace();
                     }
-
                 }
             }
         };
@@ -107,6 +103,20 @@ public class MoneyTracker_Controller{
             Scene scene=new Scene(root);
             Stage window = new Stage();
             window.setTitle("Add Transaction");
+            window.setScene(scene);
+            window.setAlwaysOnTop(true);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void eventButton(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/event.fxml"));
+            Scene scene=new Scene(root);
+            Stage window = new Stage();
+            window.setTitle("Events");
             window.setScene(scene);
             window.setAlwaysOnTop(true);
             window.show();

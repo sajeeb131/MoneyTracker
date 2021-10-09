@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.ColorAdjust?>
@@ -16,9 +17,12 @@
    <children>
       <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="1124.0">
          <menus>
+            <Menu mnemonicParsing="false" text="Features">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#eventButton" text="Events" />
+                  <MenuItem mnemonicParsing="false" text="Currency Converter" />
+               </items></Menu>
             <Menu mnemonicParsing="false" text="Logout" />
-            <Menu mnemonicParsing="false" text="Currency Converter" />
-            <Menu mnemonicParsing="false" text="Events" />
          </menus>
       </MenuBar>
       <ImageView fx:id="bill_icon" fitHeight="55.0" fitWidth="46.0" layoutX="784.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
@@ -178,7 +182,10 @@
          </font>
       </Label>
       <TextArea fx:id="area" editable="false" layoutX="50.0" layoutY="137.0" prefHeight="330.0" prefWidth="494.0" style="-fx-border-color: cyan;" text="History:" />
-      <Button layoutX="886.0" layoutY="649.0" mnemonicParsing="false" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD" />
+      <Button layoutX="886.0" layoutY="649.0" mnemonicParsing="false" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <Label layoutX="65.0" layoutY="75.0" text="Hello,">
          <font>
             <Font name="Comic Sans MS" size="29.0" />

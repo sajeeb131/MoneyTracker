@@ -3,7 +3,10 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+
 import java.io.*;
 import java.net.URL;
 import java.time.LocalDate;
@@ -19,7 +22,6 @@ public class AddTransaction implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         categoryAdd.getItems().addAll(categories);
     }
-
     @FXML
     TextField amountTF;
     @FXML
@@ -50,6 +52,11 @@ public class AddTransaction implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    void closeButton(ActionEvent event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.close();
     }
 
 }
