@@ -13,26 +13,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: #FFE7C7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: #FFE7C7;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
    <children>
       <MenuBar layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="708.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
       </MenuBar>
       <ImageView fx:id="bill_icon" fitHeight="64.0" fitWidth="48.0" layoutX="783.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -114,32 +114,32 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="789.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label fx:id="billL" layoutX="789.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="895.0" layoutY="469.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label fx:id="groceryL" layoutX="895.0" layoutY="469.0" prefHeight="31.0" prefWidth="56.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="997.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label fx:id="restaurantL" layoutX="997.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="1011.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label fx:id="loan2L" layoutX="1011.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="898.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label fx:id="shoppingL" layoutX="898.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="789.0" layoutY="608.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label fx:id="transportL" layoutX="789.0" layoutY="608.0" prefHeight="31.0" prefWidth="64.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
@@ -191,7 +191,7 @@
          </font>
       </Label>
       <TextArea fx:id="area" blendMode="SOFT_LIGHT" editable="false" layoutX="50.0" layoutY="137.0" opacity="0.5" prefHeight="330.0" prefWidth="494.0" />
-      <Button layoutX="886.0" layoutY="649.0" mnemonicParsing="false" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD" />
+      <Button layoutX="886.0" layoutY="649.0" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD" />
       <Label layoutX="65.0" layoutY="75.0" text="Hello,">
          <font>
             <Font name="Comic Sans MS" size="29.0" />
