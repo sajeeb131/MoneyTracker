@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,8 +24,9 @@ public class MoneyTracker_Controller{
     TextArea area;
 
     @FXML
-    Label usernameLabel, nameL,balanceL,loanL,currencyL;
-    String username,name,balance,loan,currency;
+    Label usernameLabel, nameL,balanceL,loanL,currencyL,billL,groceryL,
+            restaurantL,shoppingL,loan2L,transportL;
+    String username,name,balance,loan,currency,bill,grocery,restaurant,shopping,transport;
 
     static BufferedWriter writer=logInPage_Controller.getWriter();
     static BufferedReader reader=logInPage_Controller.getReader();
@@ -35,7 +37,9 @@ public class MoneyTracker_Controller{
         balance=reader.readLine();
         loan=reader.readLine();
         currency=reader.readLine();
+
     }
+
     @FXML
     public void initialize() {
         usernameLabel.setText(username);
@@ -43,6 +47,26 @@ public class MoneyTracker_Controller{
         balanceL.setText(balance);
         loanL.setText(loan);
         currencyL.setText(currency);
+
+        Thread listener = new Thread(){
+            @Override
+            public void run(){
+                while (true){
+                    try{
+                        System.out.println("running");
+                        String category = reader.readLine();
+                        if (category.equals("Bills")){
+                            bill = reader.readLine();
+                            billL.setText(bill);
+                            System.out.println(bill);
+                        }
+                    }catch (IOException e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        listener.start();
     }
     @FXML
     private void addButton(ActionEvent event){
@@ -54,10 +78,9 @@ public class MoneyTracker_Controller{
             window.setScene(scene);
             window.setAlwaysOnTop(true);
             window.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
 }
