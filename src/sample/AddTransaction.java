@@ -47,7 +47,6 @@ public class AddTransaction implements Initializable{
             writer.write(date+"\n");
             writer.write(description+"\n");
             writer.flush();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -10,8 +10,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #FFE7C7;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddTransaction">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: hite;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddTransaction">
     <tabs>
         <Tab text="Expense">
             <content>
@@ -19,36 +20,92 @@
                     <children>
                         <Label layoutX="58.0" layoutY="97.0" text="Amount">
                             <font>
-                                <Font name="System Bold" size="14.0" />
+                                <Font name="Comic Sans MS Bold" size="14.0" />
                             </font>
                         </Label>
                         <ChoiceBox fx:id="categoryAdd" layoutX="152.0" layoutY="31.0" prefWidth="150.0" />
                         <Label layoutX="59.0" layoutY="31.0" text="Category">
                             <font>
-                                <Font name="System Bold" size="14.0" />
+                                <Font name="Comic Sans MS Bold" size="14.0" />
                             </font>
                         </Label>
                         <Label layoutX="59.0" layoutY="163.0" text="Date">
                             <font>
-                                <Font name="System Bold" size="14.0" />
+                                <Font name="Comic Sans MS Bold" size="14.0" />
                             </font>
                         </Label>
                         <DatePicker fx:id="dateEX" layoutX="153.0" layoutY="163.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter a date" />
-                        <TextArea fx:id="descriptionAdd" layoutX="152.0" layoutY="232.0" prefHeight="96.0" prefWidth="200.0" promptText="Write Here..." style="-fx-background-color: light blue;" />
+                        <TextArea fx:id="descriptionAdd" layoutX="152.0" layoutY="232.0" prefHeight="33.0" prefWidth="200.0" promptText="Write Here..." style="-fx-background-color: light blue;" />
                         <Label layoutX="58.0" layoutY="229.0" text="Description">
                             <font>
-                                <Font name="System Bold" size="14.0" />
+                                <Font name="Comic Sans MS Bold" size="14.0" />
                             </font>
                         </Label>
-                        <Button layoutX="160.0" layoutY="369.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="29.0" prefWidth="81.0" text="Save" />
+                        <Button layoutX="152.0" layoutY="357.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="38.0" prefWidth="116.0" text="Save" />
                         <TextField fx:id="amountTF" blendMode="MULTIPLY" layoutX="153.0" layoutY="98.0" promptText="Enter Amount Here" />
                     </children></AnchorPane>
             </content>
         </Tab>
         <Tab text="Balance">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField editable="false" layoutX="166.0" layoutY="63.0" />
+                  <Text layoutX="39.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="166.0" layoutY="140.0" />
+                  <Text layoutX="41.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit amount">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="168.0" layoutY="221.0" />
+                  <Text layoutX="43.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Balance">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="130.0" layoutY="359.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="141.0" text="Confirm">
+                     <font>
+                        <Font size="51.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
             </content>
         </Tab>
+      <Tab id="eventS" text="Events">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField layoutX="36.0" layoutY="35.0" prefHeight="26.0" prefWidth="330.0" promptText="Set event name here">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="36.0" layoutY="86.0" prefHeight="26.0" prefWidth="330.0" promptText="Enter expense amount here" />
+                  <DatePicker layoutX="111.0" layoutY="163.0" prefHeight="26.0" prefWidth="255.0" />
+                  <Text layoutX="36.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date " wrappingWidth="121.0">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="category" wrappingWidth="167.18359375">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox layoutX="111.0" layoutY="220.0" prefHeight="26.0" prefWidth="256.0" />
+                  <Button layoutX="151.0" layoutY="353.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="116.0" text="Set">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
     </tabs>
 </TabPane>

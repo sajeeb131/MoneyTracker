@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.ColorAdjust?>
@@ -13,48 +12,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: #FFE7C7;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
    <children>
-      <MenuBar layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="708.0">
+      <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="1124.0">
          <menus>
-            <Menu mnemonicParsing="false" text="File">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Close" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
+            <Menu mnemonicParsing="false" text="Logout" />
+            <Menu mnemonicParsing="false" text="Currency Converter" />
+            <Menu mnemonicParsing="false" text="Events" />
          </menus>
       </MenuBar>
-      <ImageView fx:id="bill_icon" fitHeight="64.0" fitWidth="48.0" layoutX="783.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bill_icon" fitHeight="55.0" fitWidth="46.0" layoutX="784.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/bill.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="grocery_icon" fitHeight="73.0" fitWidth="64.0" layoutX="884.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="grocery_icon" fitHeight="56.0" fitWidth="56.0" layoutX="884.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/grocery.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="restaurant_icon" fitHeight="64.0" fitWidth="81.0" layoutX="987.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="restaurant_icon" fitHeight="56.0" fitWidth="56.0" layoutX="987.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/res.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="transport_icon" fitHeight="64.0" fitWidth="64.0" layoutX="785.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="transport_icon" fitHeight="56.0" fitWidth="56.0" layoutX="793.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/transportation.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bill_icon1" fitHeight="64.0" fitWidth="64.0" layoutX="997.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bill_icon1" fitHeight="55.0" fitWidth="56.0" layoutX="995.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/loan.png" />
          </image>
@@ -94,7 +81,7 @@
       <Separator layoutX="73.0" layoutY="593.0" prefHeight="17.0" prefWidth="305.0" />
       <Separator layoutX="73.0" layoutY="554.0" prefHeight="17.0" prefWidth="305.0" />
       <Separator layoutX="73.0" layoutY="515.0" prefHeight="17.0" prefWidth="305.0" />
-      <ImageView fx:id="bill_icon11" fitHeight="71.0" fitWidth="76.0" layoutX="890.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bill_icon11" fitHeight="56.0" fitWidth="56.0" layoutX="895.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/shopping.png" />
          </image>
@@ -114,32 +101,32 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="billL" layoutX="789.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$">
+      <Label fx:id="billL" alignment="CENTER" layoutX="778.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="groceryL" layoutX="895.0" layoutY="469.0" prefHeight="31.0" prefWidth="56.0" text="\$">
+      <Label fx:id="groceryL" alignment="CENTER" layoutX="886.0" layoutY="469.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="restaurantL" layoutX="997.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$">
+      <Label fx:id="restaurantL" alignment="CENTER" layoutX="984.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="loan2L" layoutX="1011.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$">
+      <Label fx:id="loanL" alignment="CENTER" layoutX="995.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="shoppingL" layoutX="898.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$">
+      <Label fx:id="shoppingL" alignment="CENTER" layoutX="897.0" layoutY="608.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="transportL" layoutX="789.0" layoutY="608.0" prefHeight="31.0" prefWidth="64.0" text="\$">
+      <Label fx:id="transportL" alignment="CENTER" layoutX="791.0" layoutY="608.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
@@ -190,8 +177,8 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextArea fx:id="area" blendMode="SOFT_LIGHT" editable="false" layoutX="50.0" layoutY="137.0" opacity="0.5" prefHeight="330.0" prefWidth="494.0" />
-      <Button layoutX="886.0" layoutY="649.0" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD" />
+      <TextArea fx:id="area" editable="false" layoutX="50.0" layoutY="137.0" prefHeight="330.0" prefWidth="494.0" style="-fx-border-color: cyan;" text="History:" />
+      <Button layoutX="886.0" layoutY="649.0" mnemonicParsing="false" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD" />
       <Label layoutX="65.0" layoutY="75.0" text="Hello,">
          <font>
             <Font name="Comic Sans MS" size="29.0" />

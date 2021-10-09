@@ -20,12 +20,16 @@ public class logInPage_Controller {
     @FXML
     Label warning;
     @FXML
-    TextField username,password;
+    TextField username=null,password=null;
     static BufferedWriter writer;
     static BufferedReader reader;
     @FXML
     void button_LogIn(ActionEvent event){
         try{
+            if(username==null||password==null){
+                warning.setVisible(true);
+                return;
+            }
             Socket sc=new Socket("localhost",2021);
             InputStreamReader i=new InputStreamReader(sc.getInputStream());
             reader=new BufferedReader(i);
@@ -49,6 +53,7 @@ public class logInPage_Controller {
             }
             else{
                 warning.setVisible(true);
+                return;
             }
 
         }
@@ -77,7 +82,7 @@ public class logInPage_Controller {
             window.show();
         }
         catch (IOException e){
-            System.out.println("Failed to Change Scene!LoginPage: 40");
+            e.printStackTrace();
         }
     }
 }

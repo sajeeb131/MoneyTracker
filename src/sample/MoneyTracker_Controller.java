@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
+import java.net.SocketException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -37,9 +38,7 @@ public class MoneyTracker_Controller{
         balance=reader.readLine();
         loan=reader.readLine();
         currency=reader.readLine();
-
     }
-
     @FXML
     public void initialize() {
         usernameLabel.setText(username);
@@ -53,16 +52,49 @@ public class MoneyTracker_Controller{
             public void run(){
                 while (true){
                     try{
-                        System.out.println("running");
                         String category = reader.readLine();
                         if (category.equals("Bills")){
                             bill = reader.readLine();
+                            Platform.runLater( () -> {
                             billL.setText(bill);
+                            });
                             System.out.println(bill);
                         }
-                    }catch (IOException e){
+                        else if (category.equals("Grocery")){
+                            grocery = reader.readLine();
+                            Platform.runLater( () -> {
+                                groceryL.setText(grocery);
+                            });
+                        }
+                        else if (category.equals("Restaurant")){
+                            restaurant = reader.readLine();
+                            Platform.runLater( () -> {
+                                restaurantL.setText(restaurant);
+                            });
+                        }
+                        else if (category.equals("Shopping")){
+                            shopping = reader.readLine();
+                            Platform.runLater( () -> {
+                                shoppingL.setText(shopping);
+                            });
+                        }
+                        else if (category.equals("Transport")){
+                            transport = reader.readLine();
+                            Platform.runLater( () -> {
+                                transportL.setText(transport);
+                            });
+                        }
+                    }
+                    catch (SocketException e){
                         e.printStackTrace();
                     }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    catch (ClassCastException e){
+                        e.printStackTrace();
+                    }
+
                 }
             }
         };
