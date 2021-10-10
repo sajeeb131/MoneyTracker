@@ -18,6 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MoneyTracker_Controller{
+    private static String ccBalance,ccCurrency;
     @FXML
     TextArea area;
 
@@ -35,7 +36,16 @@ public class MoneyTracker_Controller{
         balance=reader.readLine();
         loan=reader.readLine();
         currency=reader.readLine();
+        ccBalance = balance;
+        ccCurrency = currency;
     }
+    public static String getBalance(){
+        return ccBalance;
+    }
+    public static String getCurrency(){
+        return ccCurrency;
+    }
+
     @FXML
     public void initialize() {
         usernameLabel.setText(username);
@@ -125,4 +135,17 @@ public class MoneyTracker_Controller{
         }
     }
 
+    public void currencyConverterButton(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/CurrencyConverter.fxml"));
+            Scene scene=new Scene(root);
+            Stage window = new Stage();
+            window.setTitle("Currency Converter");
+            window.setScene(scene);
+            window.setAlwaysOnTop(true);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
