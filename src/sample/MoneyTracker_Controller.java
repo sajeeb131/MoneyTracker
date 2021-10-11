@@ -38,6 +38,12 @@ public class MoneyTracker_Controller{
         currency=reader.readLine();
         ccBalance = balance;
         ccCurrency = currency;
+        bill=reader.readLine();
+        grocery=reader.readLine();
+        restaurant=reader.readLine();
+        shopping=reader.readLine();
+        transport=reader.readLine();
+        loan=reader.readLine();
     }
     public static String getBalance(){
         return ccBalance;
@@ -53,6 +59,13 @@ public class MoneyTracker_Controller{
         balanceL.setText(balance);
         loanL.setText(loan);
         currencyL.setText(currency);
+        billL.setText(bill);
+        groceryL.setText(grocery);
+        restaurantL.setText(restaurant);
+        shoppingL.setText(shopping);
+        transportL.setText(transport);
+        loan2L.setText(loan);
+
 
         Thread listener = new Thread(){
             @Override
@@ -60,7 +73,7 @@ public class MoneyTracker_Controller{
                 while (true){
                     try{
                         String category = reader.readLine();
-                        if (category.equals("Bills")){
+                        if (category.equals("Bill")){
                             bill = reader.readLine();
                             Platform.runLater( () -> {
                             billL.setText(bill);
