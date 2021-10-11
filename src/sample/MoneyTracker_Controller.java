@@ -19,6 +19,7 @@ import java.util.Date;
 
 public class MoneyTracker_Controller{
     private static String cBalance,cCurrency;
+    private static String pieB, pieG, pieR, pieT, pieS;
     String date;
     @FXML
     TextArea area;
@@ -61,6 +62,11 @@ public class MoneyTracker_Controller{
 
         cBalance = balance;
         cCurrency = currency;
+        pieB = bill;
+        pieG = grocery;
+        pieR = restaurant;
+        pieT = transport;
+        pieS = shopping;
 
         System.out.println("Event  date: "+date);
         System.out.println("System date: "+formatter.format(currentdate));
@@ -71,6 +77,23 @@ public class MoneyTracker_Controller{
     }
     public static String getCurrency(){
         return cCurrency;
+    }
+
+    ///PieChartController value methods
+    public static String getPieB(){
+        return pieB;
+    }
+    public static String getPieG(){
+        return pieG;
+    }
+    public static String getPieR(){
+        return pieR;
+    }
+    public static String getPieT(){
+        return pieT;
+    }
+    public static String getPieS(){
+        return pieS;
     }
 
     @FXML
@@ -187,6 +210,20 @@ public class MoneyTracker_Controller{
             Scene scene=new Scene(root);
             Stage window = new Stage();
             window.setTitle("Events");
+            window.setScene(scene);
+            window.setAlwaysOnTop(true);
+            window.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void getPieChart(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/PieChart.fxml"));
+            Scene scene=new Scene(root);
+            Stage window = new Stage();
+            window.setTitle("Graph");
             window.setScene(scene);
             window.setAlwaysOnTop(true);
             window.show();

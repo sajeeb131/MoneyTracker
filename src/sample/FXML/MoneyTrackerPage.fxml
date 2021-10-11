@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
    <children>
       <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="1124.0">
          <menus>
@@ -189,5 +189,10 @@
       </Label>
       <Separator layoutX="749.0" layoutY="209.0" prefHeight="17.0" prefWidth="348.0" />
       <TextField fx:id="eventL" alignment="CENTER" editable="false" layoutX="768.0" layoutY="59.0" prefHeight="31.0" prefWidth="327.0" promptText="Event Reminder" />
+      <Button layoutX="272.0" layoutY="649.0" mnemonicParsing="false" onAction="#getPieChart" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #33C0FF;" text="Graph">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
