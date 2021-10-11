@@ -7,6 +7,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -80,11 +81,6 @@
             <ColorAdjust brightness="-0.09" contrast="-0.6" hue="-0.07" saturation="0.26" />
          </effect>
       </Separator>
-      <Separator layoutX="73.0" layoutY="680.0" prefHeight="17.0" prefWidth="305.0" />
-      <Separator layoutX="73.0" layoutY="639.0" prefHeight="17.0" prefWidth="305.0" />
-      <Separator layoutX="73.0" layoutY="593.0" prefHeight="17.0" prefWidth="305.0" />
-      <Separator layoutX="73.0" layoutY="554.0" prefHeight="17.0" prefWidth="305.0" />
-      <Separator layoutX="73.0" layoutY="515.0" prefHeight="17.0" prefWidth="305.0" />
       <ImageView fx:id="bill_icon11" fitHeight="56.0" fitWidth="56.0" layoutX="895.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/shopping.png" />
@@ -120,7 +116,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="loanL" alignment="CENTER" layoutX="995.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label fx:id="loan2L" alignment="CENTER" layoutX="995.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
@@ -135,7 +131,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Separator layoutX="750.0" layoutY="97.0" prefHeight="17.0" prefWidth="348.0" />
+      <Separator layoutX="751.0" layoutY="162.0" prefHeight="17.0" prefWidth="348.0" />
       <Label layoutX="765.0" layoutY="186.0" prefHeight="31.0" prefWidth="71.0" text="Accounts">
          <font>
             <Font name="Comic Sans MS" size="16.0" />
@@ -192,5 +188,6 @@
          </font>
       </Label>
       <Separator layoutX="749.0" layoutY="209.0" prefHeight="17.0" prefWidth="348.0" />
+      <TextField fx:id="eventL" alignment="CENTER" editable="false" layoutX="768.0" layoutY="59.0" prefHeight="31.0" prefWidth="327.0" promptText="Event Reminder" />
    </children>
 </AnchorPane>

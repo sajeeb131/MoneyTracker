@@ -41,12 +41,12 @@
                                 <Font name="Comic Sans MS Bold" size="14.0" />
                             </font>
                         </Label>
-                        <Button layoutX="83.0" layoutY="356.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="38.0" prefWidth="116.0" text="Save">
+                        <Button layoutX="83.0" layoutY="356.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #33C0FF;" text="Save">
                      <font>
                         <Font size="18.0" />
                      </font></Button>
                         <TextField fx:id="amountTF" blendMode="MULTIPLY" layoutX="153.0" layoutY="98.0" promptText="Enter Amount Here" />
-                  <Button layoutX="227.0" layoutY="355.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="40.0" prefWidth="116.0" text="Close">
+                  <Button layoutX="227.0" layoutY="355.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: #33C0FF;" text="Close">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -54,31 +54,36 @@
                     </children></AnchorPane>
             </content>
         </Tab>
-        <Tab text="Balance">
+        <Tab onSelectionChanged="#balanceScene" text="Balance">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TextField editable="false" layoutX="166.0" layoutY="63.0" />
+                  <TextField fx:id="cBalanceL" editable="false" layoutX="166.0" layoutY="63.0" />
                   <Text layoutX="39.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance">
                      <font>
                         <Font name="Comic Sans MS" size="15.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="166.0" layoutY="140.0" />
+                  <TextField fx:id="dAmountL" layoutX="166.0" layoutY="140.0" onAction="#depositMethod" />
                   <Text layoutX="41.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit amount">
                      <font>
                         <Font name="Comic Sans MS" size="15.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="168.0" layoutY="221.0" />
+                  <TextField fx:id="nBalanceL" editable="false" layoutX="168.0" layoutY="221.0" />
                   <Text layoutX="43.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Balance">
                      <font>
                         <Font name="Comic Sans MS" size="15.0" />
                      </font>
                   </Text>
-                  <Button layoutX="130.0" layoutY="359.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="141.0" text="Confirm">
+                  <Button layoutX="63.0" layoutY="348.0" mnemonicParsing="false" onAction="#confirmButton" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #33C0FF;" text="Confirm">
                      <font>
-                        <Font size="51.0" />
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="203.0" layoutY="347.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="38.0" prefWidth="117.0" style="-fx-background-color: #33C0FF;" text="Close">
+                     <font>
+                        <Font size="18.0" />
                      </font>
                   </Button>
                </children></AnchorPane>

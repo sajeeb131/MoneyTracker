@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -13,6 +14,8 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class AddTransaction implements Initializable{
+    @FXML
+    TextField cBalanceL,dAmountL,nBalanceL;
 
     @FXML
     ChoiceBox<String> categoryAdd;
@@ -34,9 +37,12 @@ public class AddTransaction implements Initializable{
     BufferedWriter writer = logInPage_Controller.getWriter();
 
 
+
     @FXML
     public void saveButton(ActionEvent event){
         try {
+            writer.write("Transaction"+"\n");
+
             ////Sending the values to the server
             LocalDate myDate = dateEX.getValue();
             String category = categoryAdd.getValue();
@@ -49,6 +55,9 @@ public class AddTransaction implements Initializable{
             writer.write(date+"\n");
             writer.write(description+"\n");
             writer.flush();
+
+            closeButton(event);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -58,5 +67,29 @@ public class AddTransaction implements Initializable{
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.close();
     }
+    @FXML
+    void confirmButton(ActionEvent event){
+        try {
+            writer.write("Balance"+"\n");
+            System.out.println(nBalanceL.getText());
+            writer.write(nBalanceL.getText()+"\n");
+            writer.flush();
 
+            closeButton(event);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void balanceScene(Event event) {
+        cBalanceL.setText(MoneyTracker_Controller.getBalance());
+        dAmountL.setDisable(false);
+    }
+
+    public void depositMethod(ActionEvent event) {
+        nBalanceL.setText((Double.parseDouble(cBalanceL.getText())+
+                Double.parseDouble(dAmountL.getText()))+"");
+        dAmountL.setDisable(true);
+    }
 }
