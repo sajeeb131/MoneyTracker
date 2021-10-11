@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -19,12 +20,15 @@ public class CurrencyConverter_Controller implements Initializable {
     @FXML
     TextField showBalanceTf, showCurrencyTf, convertBalanceTf, amountPutTf, amountShowTf;
     @FXML
+    Label warningL;
+    @FXML
     ChoiceBox<String> choiceBox1, choiceBox2, choiceBox3;
     String[] Currencies = {"USD","Euro","Taka","Rupee"};
 
     String amountStr2,amountStr3;
 
     static BufferedReader reader = logInPage_Controller.getReader();
+    //getting data from MoneyTracker Controller
     static String balance = MoneyTracker_Controller.getBalance();
     static String currency = MoneyTracker_Controller.getCurrency();
 
@@ -51,7 +55,7 @@ public class CurrencyConverter_Controller implements Initializable {
                 amount= amount*84;
                 break;
             case "US Dollar"+"Euro" :
-                amount= amount/0.86;
+                amount= amount/1.16;
                 break;
             case "US Dollar"+"Rupee" :
                 amount= amount*75.13;
@@ -89,12 +93,15 @@ public class CurrencyConverter_Controller implements Initializable {
         String currency = choiceBox2.getValue();
         String currency2 = choiceBox3.getValue();
 
-//        if (amountStr==null){
-//            amountShowTf.setPromptText("NO Value Inserted!");
-//        }
+        //Checking if the textfiels is empty
+        if (amountPutTf.getText().length()==0){
+            warningL.setVisible(true);
+            return;
+        }
+
         switch (currency+currency2){
             case "USD"+"Taka" :
-                amount= amount*84;
+                amount= amount*84.0;
                 break;
             case "USD"+"Euro" :
                 amount= amount/0.86;
@@ -130,7 +137,7 @@ public class CurrencyConverter_Controller implements Initializable {
                 amount= amount/0.013;
                 break;
         }
-        //formatting 2 decimal value & updating the Textfields ->
+        //formatting to 2 decimal value & updating the Textfields ->
         DecimalFormat df2 = new DecimalFormat(".##");
         double dAmount2 = Double.parseDouble(df2.format(amount));
         amountStr2 = dAmount2+"";
