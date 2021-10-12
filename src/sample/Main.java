@@ -14,7 +14,7 @@ public class Main extends Application {
         primaryStage.setTitle("Sign In");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
-        Image icon=new Image("sample/icons/singUpIcon.png");
+        Image icon=new Image("sample/icons/logoCircle.png");
         primaryStage.getIcons().add(icon);
         primaryStage.show();
     }

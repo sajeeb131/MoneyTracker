@@ -19,7 +19,7 @@ public class AddTransaction implements Initializable{
 
     @FXML
     ChoiceBox<String> categoryAdd;
-    String[] categories = {"Bills", "Grocery", "Restaurant", "Transport", "Shopping"};
+    String[] categories = {"Bill", "Grocery", "Restaurant", "Transport", "Shopping"};
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -36,8 +36,6 @@ public class AddTransaction implements Initializable{
     ///Calling writer from loginPage_Controller file
     BufferedWriter writer = logInPage_Controller.getWriter();
 
-
-
     @FXML
     public void saveButton(ActionEvent event){
         try {
@@ -50,11 +48,14 @@ public class AddTransaction implements Initializable{
             String date = myDate.toString(); //Turning myDate object into String
             String description = descriptionAdd.getText();
 
+
             writer.write(category+"\n");
             writer.write(amount+"\n");
             writer.write(date+"\n");
             writer.write(description+"\n");
             writer.flush();
+
+
 
             closeButton(event);
 

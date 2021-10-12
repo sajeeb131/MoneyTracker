@@ -26,14 +26,11 @@ public class events_Controller {
         try {
             LocalDate localdate= datePick.getValue();
             String date=localdate+"";
-            System.out.println(date);
 
             writer.write("Event"+"\n");
             writer.write(date+"\n");
             writer.write(nameL.getText() +"\n");
-            System.out.println(nameL.getText());
             writer.write(amountL.getText()+"\n");
-            System.out.println(amountL.getText());
 
             writer.flush();
 

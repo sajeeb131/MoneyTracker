@@ -23,7 +23,8 @@ public class MoneyTracker_Controller{
     private static String pieB, pieG, pieR, pieT, pieS;
     String date;
     @FXML
-    TextArea area;
+    static TextArea area;
+
 
     //user data instances
     @FXML
@@ -71,8 +72,6 @@ public class MoneyTracker_Controller{
         pieT = transport;
         pieS = shopping;
 
-        System.out.println("Event  date: "+date);
-        System.out.println("System date: "+formatter.format(currentdate));
 
     }
     public static String getBalance(){
@@ -92,15 +91,14 @@ public class MoneyTracker_Controller{
     public static String getPieR(){
         return pieR;
     }
-    public static String getPieT(){
-        return pieT;
-    }
+    public static String getPieT() { return pieT; }
     public static String getPieS(){
         return pieS;
     }
 
+
     @FXML
-    public void initialize() {
+    public void initialize() throws IOException {
         //set all user data from server to UI
         usernameLabel.setText(username);
         nameL.setText(name);
@@ -116,6 +114,7 @@ public class MoneyTracker_Controller{
         transportL.setText(transport);
         loan2L.setText(loan);
 
+
         //event reminder code to receive event info from server
         //then send null event info to server
         if(date.equals(formatter.format(currentdate))){
@@ -123,10 +122,11 @@ public class MoneyTracker_Controller{
                 writer.write("EventInfo"+"\n");
                 writer.flush();
                 info=reader.readLine();
-                System.out.println(info);
+                String eventBalance=reader.readLine();
                 balance=reader.readLine();
+                cBalance=balance;
                 Platform.runLater( () -> {
-                    eventL.setText("Reminder: "+info+"-----Amount: "+balance);
+                    eventL.setText("Reminder: "+info+"-----Amount: "+eventBalance);
                     balanceL.setText(balance);
                 });
                 //Sending negative to server for event reminder
@@ -155,6 +155,7 @@ public class MoneyTracker_Controller{
                         if (category.equals("Bill")){
                             bill = reader.readLine();
                             balance=reader.readLine();
+                            cBalance=balance;
                             Platform.runLater( () -> {
                                 billL.setText(bill);
                                 balanceL.setText(balance);
@@ -163,6 +164,7 @@ public class MoneyTracker_Controller{
                         else if (category.equals("Grocery")){
                             grocery = reader.readLine();
                             balance=reader.readLine();
+                            cBalance=balance;
                             Platform.runLater( () -> {
                                 groceryL.setText(grocery);
                                 balanceL.setText(balance);
@@ -171,6 +173,7 @@ public class MoneyTracker_Controller{
                         else if (category.equals("Restaurant")){
                             restaurant = reader.readLine();
                             balance=reader.readLine();
+                            cBalance=balance;
                             Platform.runLater( () -> {
                                 restaurantL.setText(restaurant);
                                 balanceL.setText(balance);
@@ -179,6 +182,7 @@ public class MoneyTracker_Controller{
                         else if (category.equals("Shopping")){
                             shopping = reader.readLine();
                             balance=reader.readLine();
+                            cBalance=balance;
                             Platform.runLater( () -> {
                                 shoppingL.setText(shopping);
                                 balanceL.setText(balance);
@@ -187,6 +191,7 @@ public class MoneyTracker_Controller{
                         else if (category.equals("Transport")){
                             transport = reader.readLine();
                             balance=reader.readLine();
+                            cBalance=balance;
                             Platform.runLater( () -> {
                                 transportL.setText(transport);
                                 balanceL.setText(balance);
@@ -194,6 +199,7 @@ public class MoneyTracker_Controller{
                         }
                         else if(category.equals("Balance")){
                             balance=reader.readLine();
+                            cBalance=balance;
                             Platform.runLater( () -> {
                                 balanceL.setText(balance);
                             });
@@ -213,7 +219,6 @@ public class MoneyTracker_Controller{
         };
         listener.start();
     }
-
 
     //fxml methods
 
