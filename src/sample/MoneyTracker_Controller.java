@@ -29,7 +29,7 @@ public class MoneyTracker_Controller{
     @FXML
     Label usernameLabel, nameL,balanceL,loanL,currencyL,billL,groceryL,
             restaurantL,shoppingL,loan2L,transportL;
-    String username,name,balance,loan,currency,bill,grocery,restaurant,shopping,transport;
+    String username,name,balance,loan,currency,bill,grocery,restaurant,shopping,transport,info;
     @FXML
     TextField eventL;
 
@@ -116,19 +116,32 @@ public class MoneyTracker_Controller{
         transportL.setText(transport);
         loan2L.setText(loan);
 
+        //event reminder code to receive event info from server
+        //then send null event info to server
         if(date.equals(formatter.format(currentdate))){
             try {
                 writer.write("EventInfo"+"\n");
                 writer.flush();
-                String line=reader.readLine();
-                eventL.setText(line);
-                System.out.println("inside equals");
+                info=reader.readLine();
+                System.out.println(info);
+                balance=reader.readLine();
+                Platform.runLater( () -> {
+                    eventL.setText("Reminder: "+info+"-----Amount: "+balance);
+                    balanceL.setText(balance);
+                });
+                //Sending negative to server for event reminder
+                writer.write("Event"+"\n");
+                writer.write("null"+"\n");
+                writer.write("null"+"\n");
+                writer.write("0.0"+"\n");
+                writer.flush();
+                //this.suspend();
             }
-            catch (Exception e) {
+            catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        else{
+        else {
             eventL.setText("No event Today!");
         }
 
@@ -141,33 +154,42 @@ public class MoneyTracker_Controller{
                         String category = reader.readLine();
                         if (category.equals("Bill")){
                             bill = reader.readLine();
+                            balance=reader.readLine();
                             Platform.runLater( () -> {
-                            billL.setText(bill);
+                                billL.setText(bill);
+                                balanceL.setText(balance);
                             });
-                            System.out.println(bill);
                         }
                         else if (category.equals("Grocery")){
                             grocery = reader.readLine();
+                            balance=reader.readLine();
                             Platform.runLater( () -> {
                                 groceryL.setText(grocery);
+                                balanceL.setText(balance);
                             });
                         }
                         else if (category.equals("Restaurant")){
                             restaurant = reader.readLine();
+                            balance=reader.readLine();
                             Platform.runLater( () -> {
                                 restaurantL.setText(restaurant);
+                                balanceL.setText(balance);
                             });
                         }
                         else if (category.equals("Shopping")){
                             shopping = reader.readLine();
+                            balance=reader.readLine();
                             Platform.runLater( () -> {
                                 shoppingL.setText(shopping);
+                                balanceL.setText(balance);
                             });
                         }
                         else if (category.equals("Transport")){
                             transport = reader.readLine();
+                            balance=reader.readLine();
                             Platform.runLater( () -> {
                                 transportL.setText(transport);
+                                balanceL.setText(balance);
                             });
                         }
                         else if(category.equals("Balance")){
@@ -190,9 +212,10 @@ public class MoneyTracker_Controller{
             }
         };
         listener.start();
-
     }
 
+
+    //fxml methods
 
     @FXML
     private void addButton(ActionEvent event){

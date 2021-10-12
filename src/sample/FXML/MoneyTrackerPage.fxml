@@ -15,9 +15,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1124.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoneyTracker_Controller">
    <children>
-      <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="1124.0">
+      <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="1022.0">
          <menus>
             <Menu mnemonicParsing="false" text="Features">
                <items>
@@ -27,27 +27,27 @@
                </items></Menu>
          </menus>
       </MenuBar>
-      <ImageView fx:id="bill_icon" fitHeight="55.0" fitWidth="46.0" layoutX="784.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bill_icon" fitHeight="55.0" fitWidth="46.0" layoutX="794.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/bill.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="grocery_icon" fitHeight="56.0" fitWidth="56.0" layoutX="884.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="grocery_icon" fitHeight="56.0" fitWidth="56.0" layoutX="894.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/grocery.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="restaurant_icon" fitHeight="56.0" fitWidth="56.0" layoutX="987.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="restaurant_icon" fitHeight="56.0" fitWidth="56.0" layoutX="997.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/res.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="transport_icon" fitHeight="56.0" fitWidth="56.0" layoutX="793.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="transport_icon" fitHeight="56.0" fitWidth="56.0" layoutX="795.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/transportation.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bill_icon1" fitHeight="55.0" fitWidth="56.0" layoutX="995.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bill_icon1" fitHeight="55.0" fitWidth="56.0" layoutX="1007.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/loan.png" />
          </image>
@@ -57,17 +57,17 @@
             <Font name="Comic Sans MS" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="881.0" layoutY="372.0" prefHeight="31.0" prefWidth="64.0" text="Grocery">
+      <Label layoutX="891.0" layoutY="382.0" prefHeight="31.0" prefWidth="64.0" text="Grocery">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="982.0" layoutY="372.0" prefHeight="32.0" prefWidth="81.0" text="Restaurant">
+      <Label layoutX="992.0" layoutY="382.0" prefHeight="32.0" prefWidth="81.0" text="Restaurant">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="1009.0" layoutY="511.0" prefHeight="32.0" prefWidth="40.0" text="Loan">
+      <Label layoutX="1014.0" layoutY="520.0" prefHeight="32.0" prefWidth="40.0" text="Loan">
          <font>
             <Font size="16.0" />
          </font>
@@ -82,57 +82,57 @@
             <ColorAdjust brightness="-0.09" contrast="-0.6" hue="-0.07" saturation="0.26" />
          </effect>
       </Separator>
-      <ImageView fx:id="bill_icon11" fitHeight="56.0" fitWidth="56.0" layoutX="895.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bill_icon11" fitHeight="56.0" fitWidth="56.0" layoutX="896.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icons/shopping.png" />
          </image>
       </ImageView>
-      <Label layoutX="786.0" layoutY="511.0" prefHeight="32.0" prefWidth="71.0" text="Transport">
+      <Label layoutX="784.0" layoutY="520.0" prefHeight="32.0" prefWidth="71.0" text="Transport">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="887.0" layoutY="511.0" prefHeight="32.0" prefWidth="71.0" text="Shopping">
+      <Label layoutX="889.0" layoutY="520.0" prefHeight="32.0" prefWidth="71.0" text="Shopping">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="785.0" layoutY="372.0" prefHeight="31.0" prefWidth="40.0" text="Bills">
+      <Label layoutX="795.0" layoutY="382.0" prefHeight="31.0" prefWidth="40.0" text="Bills">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="billL" alignment="CENTER" layoutX="778.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label fx:id="billL" alignment="CENTER" layoutX="788.0" layoutY="479.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="groceryL" alignment="CENTER" layoutX="886.0" layoutY="469.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label fx:id="groceryL" alignment="CENTER" layoutX="896.0" layoutY="479.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="restaurantL" alignment="CENTER" layoutX="984.0" layoutY="469.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label fx:id="restaurantL" alignment="CENTER" layoutX="994.0" layoutY="479.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="loan2L" alignment="CENTER" layoutX="995.0" layoutY="609.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label fx:id="loan2L" alignment="CENTER" layoutX="1007.0" layoutY="618.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="shoppingL" alignment="CENTER" layoutX="897.0" layoutY="608.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
+      <Label fx:id="shoppingL" alignment="CENTER" layoutX="898.0" layoutY="617.0" prefHeight="31.0" prefWidth="56.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="transportL" alignment="CENTER" layoutX="791.0" layoutY="608.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
+      <Label fx:id="transportL" alignment="CENTER" layoutX="793.0" layoutY="618.0" prefHeight="31.0" prefWidth="64.0" text="\$$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Separator layoutX="751.0" layoutY="162.0" prefHeight="17.0" prefWidth="348.0" />
+      <Separator layoutX="751.0" layoutY="157.0" prefHeight="17.0" prefWidth="348.0" />
       <Label layoutX="756.0" layoutY="164.0" prefHeight="31.0" prefWidth="71.0" text="Accounts">
          <font>
             <Font name="Comic Sans MS" size="16.0" />
@@ -179,9 +179,9 @@
          </font>
       </Label>
       <TextArea fx:id="area" editable="false" layoutX="50.0" layoutY="137.0" prefHeight="371.0" prefWidth="602.0" style="-fx-border-color: cyan;" text="History:" />
-      <Button layoutX="886.0" layoutY="649.0" mnemonicParsing="false" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD">
+      <Button layoutX="877.0" layoutY="664.0" mnemonicParsing="false" onAction="#addButton" prefHeight="34.0" prefWidth="99.0" style="-fx-background-color: #33C0FF;" text="ADD" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Comic Sans MS Bold" size="15.0" />
          </font></Button>
       <Label layoutX="65.0" layoutY="75.0" text="Hello,">
          <font>
@@ -189,19 +189,21 @@
          </font>
       </Label>
       <Separator layoutX="750.0" layoutY="189.0" prefHeight="17.0" prefWidth="348.0" />
-      <Button layoutX="891.0" layoutY="44.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #33C0FF;" text="Log out">
+      <Button layoutX="1017.0" layoutY="-1.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: #33C0FF;" text="Log out" textFill="WHITE">
          <font>
-            <Font size="13.0" />
+            <Font name="Comic Sans MS" size="15.0" />
          </font>
       </Button>
-      <TextField fx:id="eventL" alignment="CENTER" editable="false" layoutX="763.0" layoutY="102.0" prefHeight="45.0" prefWidth="332.0" promptText="Event Reminder">
+      <TextField fx:id="eventL" alignment="CENTER" editable="false" layoutX="763.0" layoutY="102.0" prefHeight="45.0" prefWidth="342.0" promptText="Event Reminder">
          <font>
             <Font size="16.0" />
          </font></TextField>
-      <Button layoutX="264.0" layoutY="640.0" mnemonicParsing="false" onAction="#getPieChart" prefHeight="41.0" prefWidth="115.0" style="-fx-background-color: #33C0FF;" text="Graph">
+      <Button layoutX="264.0" layoutY="640.0" mnemonicParsing="false" onAction="#getPieChart" prefHeight="41.0" prefWidth="115.0" style="-fx-background-color: #33C0FF;" text="Graph" textFill="WHITE" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="745.0" AnchorPane.topAnchor="640.0">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Comic Sans MS Bold" size="15.0" />
          </font>
       </Button>
+      <Separator layoutX="761.0" layoutY="509.0" prefHeight="5.0" prefWidth="324.0" />
+      <Separator layoutX="768.0" layoutY="649.0" prefHeight="5.0" prefWidth="324.0" />
    </children>
 </AnchorPane>
