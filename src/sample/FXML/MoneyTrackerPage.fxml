@@ -6,6 +6,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
@@ -21,9 +22,9 @@
             <Menu mnemonicParsing="false" text="Features">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#eventButton" text="Events" />
-                  <MenuItem mnemonicParsing="false" text="Currency Converter" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#currencyConverterButton" text="Currency Converter" />
                </items></Menu>
-            <Menu mnemonicParsing="false" text="Logout" />
          </menus>
       </MenuBar>
       <ImageView fx:id="bill_icon" fitHeight="55.0" fitWidth="46.0" layoutX="784.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
@@ -132,7 +133,7 @@
          </font>
       </Label>
       <Separator layoutX="751.0" layoutY="162.0" prefHeight="17.0" prefWidth="348.0" />
-      <Label layoutX="765.0" layoutY="186.0" prefHeight="31.0" prefWidth="71.0" text="Accounts">
+      <Label layoutX="756.0" layoutY="164.0" prefHeight="31.0" prefWidth="71.0" text="Accounts">
          <font>
             <Font name="Comic Sans MS" size="16.0" />
          </font>
@@ -147,37 +148,37 @@
             <Font name="Comic Sans MS" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="766.0" layoutY="217.0" prefHeight="31.0" prefWidth="90.0" text="Name">
+      <Label layoutX="765.0" layoutY="208.0" prefHeight="31.0" prefWidth="90.0" text="Name">
          <font>
             <Font name="Comic Sans MS" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="764.0" layoutY="251.0" prefHeight="31.0" prefWidth="115.0" text="Balance">
+      <Label layoutX="764.0" layoutY="245.0" prefHeight="31.0" prefWidth="115.0" text="Balance">
          <font>
             <Font name="Comic Sans MS" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="currencyL" layoutX="954.0" layoutY="324.0" prefHeight="31.0" prefWidth="161.0" text="\$">
+      <Label fx:id="currencyL" layoutX="949.0" layoutY="322.0" prefHeight="31.0" prefWidth="161.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="loanL" layoutX="953.0" layoutY="289.0" prefHeight="31.0" prefWidth="161.0" text="\$">
+      <Label fx:id="loanL" layoutX="949.0" layoutY="287.0" prefHeight="31.0" prefWidth="161.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="balanceL" layoutX="953.0" layoutY="252.0" prefHeight="31.0" prefWidth="161.0" text="\$">
+      <Label fx:id="balanceL" layoutX="949.0" layoutY="245.0" prefHeight="31.0" prefWidth="161.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="nameL" layoutX="953.0" layoutY="219.0" prefHeight="31.0" prefWidth="152.0" text="\$">
+      <Label fx:id="nameL" layoutX="950.0" layoutY="208.0" prefHeight="31.0" prefWidth="152.0" text="\$">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextArea fx:id="area" editable="false" layoutX="50.0" layoutY="137.0" prefHeight="330.0" prefWidth="494.0" style="-fx-border-color: cyan;" text="History:" />
+      <TextArea fx:id="area" editable="false" layoutX="50.0" layoutY="137.0" prefHeight="371.0" prefWidth="602.0" style="-fx-border-color: cyan;" text="History:" />
       <Button layoutX="886.0" layoutY="649.0" mnemonicParsing="false" onAction="#addButton" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #33C0FF;" text="ADD">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -187,9 +188,17 @@
             <Font name="Comic Sans MS" size="29.0" />
          </font>
       </Label>
-      <Separator layoutX="749.0" layoutY="209.0" prefHeight="17.0" prefWidth="348.0" />
-      <TextField fx:id="eventL" alignment="CENTER" editable="false" layoutX="768.0" layoutY="59.0" prefHeight="31.0" prefWidth="327.0" promptText="Event Reminder" />
-      <Button layoutX="272.0" layoutY="649.0" mnemonicParsing="false" onAction="#getPieChart" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #33C0FF;" text="Graph">
+      <Separator layoutX="750.0" layoutY="189.0" prefHeight="17.0" prefWidth="348.0" />
+      <Button layoutX="891.0" layoutY="44.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #33C0FF;" text="Log out">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="eventL" alignment="CENTER" editable="false" layoutX="763.0" layoutY="102.0" prefHeight="45.0" prefWidth="332.0" promptText="Event Reminder">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <Button layoutX="264.0" layoutY="640.0" mnemonicParsing="false" onAction="#getPieChart" prefHeight="41.0" prefWidth="115.0" style="-fx-background-color: #33C0FF;" text="Graph">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

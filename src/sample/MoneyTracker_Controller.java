@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.net.Socket;
 import java.net.SocketException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,14 +43,13 @@ public class MoneyTracker_Controller{
 
 
     public MoneyTracker_Controller() throws IOException{
-        //get default user data
         username=reader.readLine();
         name=reader.readLine();
         balance=reader.readLine();
         loan=reader.readLine();
         currency=reader.readLine();
 
-        //get default user data
+        //Updating the Categories items
         bill=reader.readLine();
         grocery=reader.readLine();
         restaurant=reader.readLine();
@@ -60,8 +60,11 @@ public class MoneyTracker_Controller{
         //get event date
         date=reader.readLine();
 
+        //for balance update
         cBalance = balance;
         cCurrency = currency;
+
+        //for Pie Chart
         pieB = bill;
         pieG = grocery;
         pieR = restaurant;
@@ -104,6 +107,8 @@ public class MoneyTracker_Controller{
         balanceL.setText(balance);
         loanL.setText(loan);
         currencyL.setText(currency);
+
+        //Updating the Textfields of Categories
         billL.setText(bill);
         groceryL.setText(grocery);
         restaurantL.setText(restaurant);
@@ -242,6 +247,20 @@ public class MoneyTracker_Controller{
             window.setAlwaysOnTop(true);
             window.show();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void logoutButton(ActionEvent event) {
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/logIn.fxml"));
+            Scene scene=new Scene(root);
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setTitle("Create a new Account");
+            window.setScene(scene);
+            window.show();
+        }
+        catch (IOException e){
             e.printStackTrace();
         }
     }
